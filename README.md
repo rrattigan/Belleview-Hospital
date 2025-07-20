@@ -1,10 +1,6 @@
 # Belleview-Hospital
 This Repository entails all the code for my Hospital Management System
 
-======================================
-BELLEVIEW HOSPITAL (BH) - README
-======================================
-
 Romario Rattigan - 20243502
 July 20th, 2025
 Programming Techniques: ITT103
