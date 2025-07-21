@@ -1,7 +1,3 @@
-======================================
-BELLEVIEW HOSPITAL (BH) - README
-======================================
-
 Romario Rattigan - 20243502
 July 20th, 2025
 Programming Techniques: ITT103
