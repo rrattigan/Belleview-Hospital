@@ -36,6 +36,23 @@ class Appointment:
         self.status = "Scheduled"  # Statuses: Scheduled, Completed, Cancelled
         self.bill = None
 
+    def confirm(self):
+        """Confirms the appointment."""
+        self.status = "Scheduled"
+        print(f"Appointment {self.appointment_id} has been confirmed.")
+
+    def cancel(self):
+        """Cancels the appointment."""
+        self.status = "Cancelled"
+        print(f"Appointment {self.appointment_id} has been cancelled.")
+    
+    def complete(self):
+        """Marks the appointment as completed."""
+        self.status = "Completed"
+
+    def display_details(self):
+        print(f"{self.appointment_id:<15} | {self.patient.name:<20} | Dr. {self.doctor.name:<20} | {self.date:<12} | {self.time:<8} | {self.status:<12}")
+
 class Person:
     """Base class representing a person with common attributes."""
     def __init__(self, name, age, gender):
@@ -115,23 +132,6 @@ class Doctor(Person):
             # If a date has no more slots, remove it for cleanliness
             if not self.schedule[date]:
                 del self.schedule[date]
-
-    def confirm(self):
-        """Confirms the appointment."""
-        self.status = "Scheduled"
-        print(f"Appointment {self.appointment_id} has been confirmed.")
-
-    def cancel(self):
-        """Cancels the appointment."""
-        self.status = "Cancelled"
-        print(f"Appointment {self.appointment_id} has been cancelled.")
-    
-    def complete(self):
-        """Marks the appointment as completed."""
-        self.status = "Completed"
-
-    def display_details(self):
-        print(f"{self.appointment_id:<15} | {self.patient.name:<20} | Dr. {self.doctor.name:<20} | {self.date:<12} | {self.time:<8} | {self.status:<12}")
 
 class BelleViewHospitalSystem:
     """The main class to manage the hospital operations."""
